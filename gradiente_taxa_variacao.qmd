@@ -1,0 +1,145 @@
+---
+title: "Gradiente, Taxa de Variação Máxima, Taxa em Direção de Vetor"
+author: Lucas Magalhães Ast
+toc: true
+format: html
+---
+
+# 🌐 Gradiente e Taxa de Variação Máxima
+
+## 🎯 Objetivo
+
+Neste documento, vamos entender:
+
+- O que é o **gradiente** de uma função escalar $f(x, y)$
+- Como ele representa a **direção de maior crescimento**
+- Como calcular a **taxa de variação máxima**
+- Como determinar a taxa de variação em uma **direção qualquer**
+
+---
+
+## 💡 O que é o gradiente?
+
+Seja $f(x, y)$ uma função escalar de duas variáveis. O **gradiente de $f$** é um vetor que contém as derivadas parciais de $f$:
+
+$$
+\nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)
+$$
+
+Esse vetor aponta na direção onde a função $f$ **aumenta mais rapidamente**, e o seu **módulo** nos dá a **taxa máxima de crescimento** da função naquele ponto.
+
+---
+
+## 📐 Interpretação geométrica
+
+- O vetor $\nabla f$ é **perpendicular** às curvas de nível de $f$
+- A função cresce mais rapidamente na direção do gradiente
+- A função decresce mais rapidamente na direção oposta
+
+---
+
+## 🧮 Passo a passo para calcular o gradiente
+
+Dado $f(x, y)$, siga os passos:
+
+### 1️⃣ Derive parcialmente em relação a $x$:
+
+$$
+f_x = \frac{\partial f}{\partial x}
+$$
+
+### 2️⃣ Derive parcialmente em relação a $y$:
+
+$$
+f_y = \frac{\partial f}{\partial y}
+$$
+
+### 3️⃣ Forme o vetor gradiente:
+
+$$
+\nabla f(x, y) = (f_x,\ f_y)
+$$
+
+---
+
+## 📍 Taxa de variação máxima em um ponto $P$
+
+A **taxa máxima de variação** de $f$ no ponto $P = (x_0, y_0)$ é o **módulo do gradiente** naquele ponto:
+
+$$
+\left| \nabla f(x_0, y_0) \right| = \sqrt{f_x^2 + f_y^2}
+$$
+
+E a **direção da maior variação** é o **vetor gradiente normalizado**:
+
+$$
+\vec{u} = \frac{\nabla f}{\left|\nabla f\right|}
+$$
+
+---
+
+## 🔄 Taxa de variação na direção de um vetor $\vec{v}$
+
+Dada uma direção unitária $\vec{v} = (a, b)$, a taxa de variação de $f$ nessa direção é:
+
+$$
+D_{\vec{v}} f(x, y) = \nabla f(x, y) \cdot \vec{v} = f_x \cdot a + f_y \cdot b
+$$
+
+⚠️ Se $\vec{v}$ **não for unitário**, normalize antes:
+
+$$
+\vec{v}_{\text{unit}} = \frac{\vec{v}}{\|\vec{v}\|}
+$$
+
+---
+
+## ✅ Exemplo
+
+Seja:
+
+$$
+f(x, y) = x^2 \ln(y)
+\quad \text{e } P = (3, 1)
+$$
+
+1. Calcule as derivadas parciais:
+
+$$
+f_x = 2x \ln(y), \qquad f_y = \frac{x^2}{y}
+$$
+
+2. Avalie no ponto $P = (3, 1)$:
+
+$$
+f_x(3, 1) = 2 \cdot 3 \cdot \ln(1) = 0
+\qquad
+f_y(3, 1) = \frac{9}{1} = 9
+$$
+
+3. Gradiente no ponto:
+
+$$
+\nabla f(3, 1) = (0,\ 9)
+$$
+
+4. Taxa de variação máxima:
+
+$$
+|\nabla f(3, 1)| = \sqrt{0^2 + 9^2} = 9
+$$
+
+5. Direção de maior crescimento:
+
+$$
+\vec{u} = \frac{(0, 9)}{9} = (0, 1)
+$$
+
+---
+
+## 🧠 Conclusão
+
+- O **gradiente** indica **para onde** a função cresce mais rápido.
+- O **módulo do gradiente** indica **quão rápido** ela cresce nessa direção.
+- Para outras direções, usamos o **produto escalar** com um vetor unitário.
+
