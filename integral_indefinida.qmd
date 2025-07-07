@@ -1,0 +1,147 @@
+---
+title: "Integrais Indefinidas"
+Author: Lucas Magalhães Ast
+format: html
+toc: true
+---
+
+# 📚 Integrais Indefinidas — Passo a Passo com Exemplos
+
+## ✨ Conceito
+
+A integral indefinida de uma função $f(x)$ é uma **função primitiva** $F(x)$ tal que:
+
+$$
+F'(x) = f(x)
+$$
+
+A notação é:
+
+$$
+\int f(x)\,dx = F(x) + C
+$$
+
+onde $C$ é a **constante de integração**.
+
+---
+
+## 🧩 Tipos Comuns de Integrais e Como Resolver
+
+### 1. **Função polinomial**
+
+Se $f(x)$ é uma soma de potências de $x$, usamos:
+
+$$
+\int x^n\,dx = \frac{x^{n+1}}{n+1} + C, \quad \text{com } n \ne -1
+$$
+
+📌 **Exemplo:**
+
+$$
+\int (x^2 + x^{-2})\,dx
+= \frac{x^3}{3} - \frac{1}{x} + C
+$$
+
+(Aplicável ao item **(a)**)
+
+---
+
+### 2. **Raízes e potências fracionárias**
+
+Reescreva raízes como potências:
+
+- $\sqrt[3]{x} = x^{1/3}$
+- $\sqrt{x} = x^{1/2}$
+
+📌 **Exemplo:**
+
+$$
+\int \left( \sqrt[3]{x^3} + \sqrt[4]{x^2} \right)\,dx
+= \int (x + x^{1/2})\,dx
+= \frac{x^2}{2} + \frac{2}{3}x^{3/2} + C
+$$
+
+(Aplicável ao item **(b)**)
+
+---
+
+### 3. **Distribuição do produto ou fatoração**
+
+Distribua o produto antes de integrar.
+
+📌 **Exemplo:**
+
+$$
+\int (u + 4)(2u + 1)\,du
+$$
+
+Faça a distributiva:
+
+$$
+= \int (2u^2 + u + 8u + 4)\,du
+= \int (2u^2 + 9u + 4)\,du
+= \frac{2u^3}{3} + \frac{9u^2}{2} + 4u + C
+$$
+
+(Aplicável ao item **(e)**)
+
+---
+
+### 4. **Frações simples (divida ou separe)**
+
+Tente separar:
+
+📌 **Exemplo:**
+
+$$
+\int \left( \frac{2}{x} + \frac{3}{x^2} \right)\,dx
+= 2\ln|x| - \frac{3}{x} + C
+$$
+
+(Aplicável ao item **(d)**)
+
+---
+
+### 5. **Substituição simples (mudança de variável)**
+
+Quando uma função **composta** aparece (como seno ou exponencial multiplicado), tente:
+
+> Seja $u = g(x)$, então $du = g'(x)\,dx$
+
+📌 **Exemplo:**
+
+$$
+\int x e^x\,dx \quad \text{(integração por partes ou substituição)}
+$$
+
+Mais aplicável em itens como **(l), (m), (n)**.
+
+---
+
+### 6. **Funções trigonométricas conhecidas**
+
+Lembrar:
+
+- $\int \sin(x)\,dx = -\cos(x) + C$
+- $\int \cos(x)\,dx = \sin(x) + C$
+- $\int \frac{\sin(x)}{\cos(x)}\,dx = -\ln|\cos(x)| + C$
+
+📌 **Exemplo:**
+
+$$
+\int (\sin(x) + \cos(x))\,dx = -\cos(x) + \sin(x) + C
+$$
+
+(Aplicável ao item **(j)**)
+
+---
+
+## ✅ Dica Geral
+
+1. **Simplifique a função** primeiro: reescreva raízes, potências negativas, produtos.
+2. **Veja se é uma soma de funções simples**.
+3. Se não der, **pense em substituição** ou **integração por partes**.
+4. Sempre **adicione a constante $C$** no final.
+
+---
+
