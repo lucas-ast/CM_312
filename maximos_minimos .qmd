@@ -1,0 +1,132 @@
+---
+title: "Máximos e mínimos de funções de várias variáveis. Teste da segunda derivada."
+Author: Lucas Magalhães Ast
+toc: true
+format: html
+---
+
+# Máximos e Mínimos de Funções de Várias Variáveis  
+## Teste da Segunda Derivada
+
+### 📌 Conceito
+
+Em funções de duas variáveis $f(x, y)$, **máximos e mínimos locais** são pontos onde a função atinge **valores extremos locais**, ou seja, maiores ou menores que os valores ao redor.
+
+Esses pontos críticos ocorrem onde:
+
+$$
+\frac{\partial f}{\partial x} = 0 \quad \text{e} \quad \frac{\partial f}{\partial y} = 0
+$$
+
+---
+
+### 🎯 Objetivo do Teste da Segunda Derivada
+
+Após encontrar os **pontos críticos**, o **teste da segunda derivada** permite **classificá-los** como:
+
+- Máximo local
+- Mínimo local
+- Ponto de sela
+
+---
+
+### 🧪 Como aplicar o teste?
+
+Seja:
+
+- $f_{xx} = \frac{\partial^2 f}{\partial x^2}$
+- $f_{yy} = \frac{\partial^2 f}{\partial y^2}$
+- $f_{xy} = \frac{\partial^2 f}{\partial x \partial y}$
+
+Calculamos o **determinante da Hessiana**:
+
+$$
+D = f_{xx} f_{yy} - (f_{xy})^2
+$$
+
+Então aplicamos:
+
+| Valor de $D$      | $f_{xx}$          | Conclusão          |
+|-------------------|------------------|--------------------|
+| $D > 0$           | $> 0$            | Mínimo local       |
+| $D > 0$           | $< 0$            | Máximo local       |
+| $D < 0$           | –                | Ponto de sela      |
+| $D = 0$           | –                | Teste inconclusivo |
+
+---
+
+### 🧮 Passo a passo para resolver
+
+1. Calcule $f_x$ e $f_y$
+2. Resolva o sistema $f_x = 0$, $f_y = 0$ para encontrar os pontos críticos
+3. Calcule $f_{xx}, f_{yy}, f_{xy}$
+4. Avalie o discriminante $D$
+5. Classifique o ponto com base em $D$ e $f_{xx}$
+
+---
+
+### ✍️ Exemplo
+
+Seja $f(x, y) = x^2 + xy + y^2 + y$
+
+#### 1. Derivadas de primeira ordem:
+
+$$
+f_x = 2x + y, \quad f_y = x + 2y + 1
+$$
+
+#### 2. Igualamos a zero:
+
+$$
+\begin{cases}
+2x + y = 0 \\
+x + 2y + 1 = 0
+\end{cases}
+$$
+
+Resolve o sistema:
+
+- Da primeira: $y = -2x$
+- Substituindo na segunda:
+
+$$
+x + 2(-2x) + 1 = 0 \Rightarrow x - 4x + 1 = 0 \Rightarrow -3x = -1 \Rightarrow x = \frac{1}{3}
+$$
+
+$$
+\Rightarrow y = -2 \cdot \frac{1}{3} = -\frac{2}{3}
+$$
+
+✅ Ponto crítico: $\left(\frac{1}{3}, -\frac{2}{3}\right)$
+
+---
+
+#### 3. Derivadas de segunda ordem:
+
+$$
+f_{xx} = 2, \quad f_{yy} = 2, \quad f_{xy} = 1
+$$
+
+#### 4. Determinante:
+
+$$
+D = f_{xx} f_{yy} - (f_{xy})^2 = 2 \cdot 2 - 1^2 = 4 - 1 = 3 > 0
+$$
+
+E $f_{xx} = 2 > 0$ ⟹ **Mínimo local**
+
+---
+
+### ✅ Conclusão:
+
+A função $f(x, y) = x^2 + xy + y^2 + y$ tem um **mínimo local** no ponto  
+$$
+\left( \frac{1}{3},\ -\frac{2}{3} \right)
+$$
+
+---
+
+### 💡 Observações:
+
+- O teste da segunda derivada **não vale** para pontos onde $D = 0$
+- Pode ser estendido a mais variáveis com a **matriz Hessiana**
